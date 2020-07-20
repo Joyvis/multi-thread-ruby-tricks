@@ -39,6 +39,6 @@ ActiveRecord::Schema.define(version: 2020_07_20_013015) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "transfers", "accounts", column: "source_account_id"
-  add_foreign_key "transfers", "accounts", column: "target_account_id"
+  add_foreign_key "transfers", "bank_accounts", column: "source_account_id"
+  add_foreign_key "transfers", "bank_accounts", column: "target_account_id"
 end

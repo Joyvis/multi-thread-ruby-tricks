@@ -10,7 +10,7 @@ gem 'puma', '~> 4.1'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.2'
 gem 'sqlite3', '~> 1.4'
 gem 'type_validator', '~> 1.0'
-gem 'u-case', '~> 2.2', require: 'u-case/with_validation'
+gem 'u-case', '~> 2.2', require: 'u-case/with_activemodel_validation'
 
 group :test do
   gem 'factory_bot_rails'
