@@ -16,9 +16,11 @@ module BankAccounts
 
         def total_external
           request_external_services
-            .map { |transaction| transaction[:value] }
+            .map(&:execute)
+            .map(&:value)
+            .flatten
+            .map { |transaction| transaction[:value].to_f }
             .sum
-            .to_f
         end
 
         def request_external_services
@@ -29,9 +31,9 @@ module BankAccounts
         end
 
         def service_value
-          RestClient.get('http://localhost:4000/external_requests') do |response|
-            JSON.parse(response, symbolize_names: true)
-          end
+          Concurrent::Promise
+            .new { RestClient.get('http://localhost:4000/external_requests') }
+            .then { |response| JSON.parse(response, symbolize_names: true) }
         end
       end
     end
