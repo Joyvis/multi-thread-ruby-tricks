@@ -1,18 +1,18 @@
 class ExternalRequestsController < ApplicationController
   def index
-    sleep(0.5)
-    render json: response_body
+    sleep(1)
+    render json: transactions
   end
 
   private
 
-  def response_body
+  def transactions
     10.times.map do
-      response_body_item
+      transaction
     end
   end
 
-  def response_body_item
+  def transaction
     { desc: :transaction, value: 1 }
   end
 end
