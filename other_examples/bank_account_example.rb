@@ -15,6 +15,7 @@ end
 Benchmark.bm do |rep|
   rep.report('NO THREADS: ') do
     10.times.map do
+      sleep(1)
       value = read_bank_account
       value += 1
       write_bank_account(value)

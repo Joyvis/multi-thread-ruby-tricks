@@ -18,12 +18,19 @@ end
 Benchmark.bm do |rep|
   rep.report('THREADS: ') do
     10.times.map do
+      # it runs like in the begging - line by line
       Thread.new do
-        # @mutex.synchronize do
+        # do anything
+        # do anything
+        # do anything
+        # sleep(1)
+        @mutex.synchronize do
           value = read_bank_account.to_i
           value += 1
           write_bank_account(value)
-        # end
+        end
+        # do anything
+        # do anything
       end
     end.each(&:join)
 
