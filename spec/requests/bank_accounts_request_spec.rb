@@ -16,8 +16,6 @@ describe "BankAccounts", type: :request do
     context 'when BankAccount exists' do
       let(:bank_account) { create(:bank_account) }
       let(:bank_account_id) { bank_account.id }
-      before do
-      end
 
       it 'bank account has been shown' do
         expect(parsed_response.keys).to include(:balance)
