@@ -23,7 +23,7 @@ Benchmark.bm do |rep|
         # do anything
         # do anything
         # do anything
-        # sleep(1)
+        sleep(1)
         @mutex.synchronize do
           value = read_bank_account.to_i
           value += 1

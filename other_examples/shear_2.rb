@@ -7,7 +7,7 @@ Benchmark.bm do |rep|
   rep.report("THREADS: \n") do
     sheep = Sheep.new
 
-    100.times.map do
+    5.times.map do
       Thread.new do
         sheep.shear!
       end
