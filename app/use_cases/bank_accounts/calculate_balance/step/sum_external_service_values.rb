@@ -26,6 +26,9 @@ module BankAccounts
         def request_external_services
           [
             service_value, service_value, service_value, service_value,
+            service_value, service_value, service_value, service_value,
+            service_value, service_value, service_value, service_value,
+            service_value, service_value, service_value, service_value,
             service_value, service_value, service_value, service_value
           ].flatten
         end
