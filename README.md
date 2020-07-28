@@ -1,24 +1,6 @@
-# README
+## Ruby Tricks
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* How to use multi-thread
+* How to solve problems caused by multi-thread implementation
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+(Presentation)[https://youtu.be/cSqzqkkfw6w]
